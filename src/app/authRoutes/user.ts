@@ -17,7 +17,7 @@ export default (app: any) => {
 app.route("/user/:_id")
     .get(async (req: Request, res: Response) => {
         const {params: {_id}} = req;
-        console.log(_id)
+        console.info(_id)
         const response = await userCtrl.getById(_id);
         return res.status(200).json(response);
     })
